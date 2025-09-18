@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>테이블</title>
+  </head>
+  <body>
+    <table border="1">
+        <caption>시간표</caption>
+        <thead>
+            <tr>
+            <!-- scope="col" : (접근성) 열 헤더(세로 방향으로 연결) -->
+                <th scope="col">요일</th>
+                <th scope="col">1교시</th>
+                <th scope="col">2교시</th>
+                <th scope="col">3교시</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <!-- scope="row" : (접근성) 행 헤더(가로 방향으로 연결) -->
+                <th scope="row">월요일</th>
+                <td>국어</td>
+                <td>수학</td>
+                <td>영어</td>
+            </tr>
+            <tr>
+                <th scope="row">화요일</th>
+                <!-- colspan="2" : 가로로 2칸(1교시, 2교시) 합침 -->
+                <td colspan="2">체육</td>
+                <td>과학</td>
+            </tr>
+            <tr>
+                <!-- rowspan="2" : 세로로 2칸(아래 행까지) 합침 -->
+                <th scope="row" rowspan="2">수요일</th>
+                <td>국어</td>
+                <td>사회</td>
+                <td>미술</td>
+            </tr>
+            <tr>
+                <!-- colspan="3" : 가로로 3칸(1~3교시) 합침 -->
+                <td colspan="3">실험 수업</td>
+            </tr>
+        </tbody>
+    </table>
+  </body>
+</html>
