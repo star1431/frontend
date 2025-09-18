@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0918 회원가입 성공</title>
+</head>
+<body class="body">
+    <header class="header">
+        <h1 class="title">회원가입</h1>
+    </header>
+    <main class="main">
+        <section class="section">
+            <article class="article type-center">
+                <p class="suc-title">회원가입 성공</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+
+<style>
+html {font-size: 62.5%;}
+html, body {height: 100%;}
+body {font-size: 1.6rem; line-height: 1.5; background: #f4f4f4; color: #121315;}
+* {margin: 0; padding: 0; box-sizing: border-box; font-family: Pretendard, -apple-system, sans-serif}
+
+.body {display: flex; flex-direction: column; min-height: 100dvh;}
+
+.header {padding: 20px; background-color: #0061e0;}
+.header .title {font-size: 3.2rem; font-weight: bold; text-align: center; color: #fff;}
+.main {flex: 1; padding: 20px;}
+
+.main .section:first-child {margin-top: 24px;}
+.main .article {width: 100%; padding: 16px; margin: 0 auto; border-radius: 12px; background: #fff; box-shadow: 0 0 10px rgba(0,0,0,.1);}
+.main .article.type-center {max-width: 500px;}
+
+.form {display: flex; flex-direction: column; gap: 0;}
+.form .form-head {padding-bottom: 16px; margin-bottom: 16px; border-bottom: 1px solid rgb(170, 161, 161);}
+.form .form-head {padding-bottom: 16px; margin-bottom: 16px; border-bottom: 1px solid rgb(170, 161, 161);}
+.form .form-title {font-size: 1.8rem; font-weight: bold;}
+
+.suc-title {font-size: 2.4rem; font-weight: bold; text-align: center; color: #0061e0;}
+
+.field {display: flex; flex-direction: column; gap: 16px;}
+.field .field-item {display: flex; flex-direction: column; gap: 8px;}
+.field .field-item > label {font-size: 1.6rem;}
+.field .field-item input:not([type="checkbox"],[type="radio"]) {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none !important;
+}
+.field .field-item input:not([type="checkbox"],[type="radio"]):focus-within {
+    border-color: #a0b1ff;
+}
+.field .field-item .item-group {display: flex; gap: 16px;}
+.field .field-item .option-item {display: flex; align-items: center; gap: 8px;}
+.field .field-item.type-terms .term-scroll-box {
+    max-height: 100px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #ececec;
+    overflow-y: auto;
+    &::-webkit-scrollbar {width: 6px;}
+    &::-webkit-scrollbar-thumb {background: #5e5e5e; border-radius: 3px;}
+    &::-webkit-scrollbar-button {background-color: transparent;}
+}
+.form .form-foot {display: flex; justify-content: center; margin-top: 24px;}
+.form .form-foot .btn-action {width: 100%; max-width: 200px; padding: 12px 16px; border-radius: 8px; border: none; background: #0061e0; font-size: 1.6rem; color: #fff;}
+</style>
+</html>

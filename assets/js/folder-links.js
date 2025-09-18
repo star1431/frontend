@@ -5,7 +5,8 @@ window.addEventListener('DOMContentLoaded', () => {
     if (!nav) return;
 
     const files = window.folderFiles || [];
-    if (!files.length) return;
+    console.log(files.length);
+    if (files.length === 0) return;
 
     const htmlFiles = files.filter(f => f.endsWith('.html'));
 
