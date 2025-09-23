@@ -54,6 +54,7 @@ console.log(arr2.toString());   // 5,4,3,2
 console.log(arr2.join('-'));    // 5-4-3-2
 
 
+console.log('-'.repeat(20)); 
 
 
 /** 스프레드, 복사, 배열 분해  -----------------------  */

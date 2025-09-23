@@ -1,7 +1,7 @@
 
 <div align="center">
 
-  # 멋사 백엔드 부트캠프 19기: Java (front-end)
+  # 멋사 백엔드 부트캠프 19기: Java <br> forntend 저장소
     
 </div>
 
@@ -11,6 +11,6 @@
 
 <br>
 
-### 커리큘럼 중 프론트엔드 관련 소스 정리
+### 커리큘럼 중 frontend 관련 강의내용 모음
 
 * 과정 : 09.18 ~
