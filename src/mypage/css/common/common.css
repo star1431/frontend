@@ -1,0 +1,152 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+html,body {
+    height: 100%;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+}
+
+.a11y-hidden {
+    position: absolute !important;
+    display: block !important;
+    clip: rect(0, 0, 0, 0) !important;
+    clip-path: polygon(0 0, 0 0, 0 0) !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    text-indent: unset !important;
+    visibility: visible !important;
+}
+
+
+/** layout - header */
+.ui-header {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+.ui-header .title-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+}
+.ui-header .title-area h1 {
+    font-size: 2.4rem;;
+}
+.ui-header .title-area::before {
+    content: "\eaa8";
+    width: 2.4rem;
+    height: 2.4rem;
+    font-size: 2.4rem;
+    color: #fff;
+    font-family: xeicon;
+    font-weight: 200;
+    line-height: 1;
+}
+.ui-header .slot-right {
+    position: relative;
+    margin-left: auto;
+}
+
+.ui-header .btn-menu-label {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.6rem;
+    height: 3.6rem;
+    gap: 4px;
+    transition: all .2s;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.btn-menu-label:hover {
+    background-color: rgb(255, 255, 255, 0.2);
+}
+
+
+.btn-menu-label span[class*="line"] {
+	position : absolute;
+    left: 0; 
+    right: 0;
+    margin: 0 auto;
+	width : 2rem;
+	height : 0.2rem;
+	background-color : #fff;
+	border-radius : 4px;
+    transition: all .2s;
+}
+.btn-menu-label .line-1 {
+	top: calc(50% - 0.1rem - 0.6rem);
+}
+.btn-menu-label .line-2 {
+	top: calc(50% - 0.1rem);
+}
+.btn-menu-label .line-3 {
+	top: calc(50% - 0.1rem + 0.6rem);
+}
+
+.btn-menu-input:checked + .btn-menu-label .line-1 {
+    transform: translateY(0.6rem) rotate(-45deg);
+}
+.btn-menu-input:checked + .btn-menu-label .line-2 {
+    opacity: 0;
+}
+.btn-menu-input:checked + .btn-menu-label .line-3 {
+    transform: translateY(-0.6rem) rotate(45deg);
+}
+
+
+/** layout - main */
+.ui-main {
+    flex: 1;
+}
+
+
+/** layout - footer */
+.ui-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #323639;
+}
+
+.footer-link {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    color: #fff;
+}
+.footer-link::before {
+    content: "\ebdd";
+    font-family: xeicon;
+    width: 2.4rem;
+    height: 2.4rem;
+    font-size: 2.4rem;
+    font-weight: 200;
+    line-height: 1;
+}

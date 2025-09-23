@@ -1,0 +1,42 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {padding: 20px; font-size: 20px;}
+.page-title {margin-bottom: 20px; padding-bottom: 20px; border-bottom: 2px solid #000;}
+
+code {
+    padding: 0.25rem;
+    border-radius: 8px;
+    font-family: 'Source Code Pro' !important;
+    font-size: 16px !important;
+}
+pre > code {
+    margin: 1rem auto;
+    max-height: 700px; 
+    overflow: auto;
+    white-space:  pre-wrap;
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    &::-webkit-scrollbar-button {
+        width: 8px;
+        height: 8px;
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-track {
+        background: #1e1e1e;
+        border-radius: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #6c6c6c;
+        border-radius: 4px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: #8c8c8c;
+    }
+    &::-webkit-scrollbar-corner {
+        background: #1e1e1e;
+    }
+}
+pre {white-space: pre-wrap;}
+
+.hljs-comment, .hljs-quote {font-style: normal;}

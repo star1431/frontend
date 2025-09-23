@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>position 심플 예시</title>
+<style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    .container {padding: 20px;}
+    .container * {font-size: 14px;}
+    .container p{font-size: 20px; margin: 16px 0 8px; font-weight: bold;}
+    
+    .scroll-box {width: 100%; height: 400px; padding: 0 20px; border: 2px dashed skyblue;overflow-y: auto;}
+    .item {padding: 8px; width: 200px; height: 100px; border-radius: 4px; border: 1px dashed black; background:#fff;}
+    .item.text {width: 100%;}    
+    .static {position: static;}
+    .relative {position: relative;}
+    [class*="ab"] {position: absolute;}
+    .fixed {position: fixed;}
+    .sticky {position: sticky;}
+    
+    .exam-1 {inset: 40px 0 0 160px; z-index: 1;}
+    .exam-2 {z-index: 10; inset: 104px 0 0 200px;}
+    
+    .sticky.head {top: 0; margin: -20px -20px 0; height: 40px; padding: 8px; width: calc(100% + 40px); background-color: blue; color: #fff; z-index: 100;}
+    .sticky.item-head {top: 0; margin: 0 -20px; height: 40px; padding: 8px; width: calc(100% + 40px); background-color:aqua; z-index: 100;}
+    .st-exam-1 {bottom: 0; background-color: bisque;}
+
+    .exam-side{display: flex; top: 50%; right: 20px; width: 100px; height: 40px; align-items: center; justify-content: center; background-color:greenyellow; z-index: 101; transform: translateY(-50%);}
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="sticky head">sticky (top: 0 / zindex: 100)</div>
+
+        <p>1. static 박스</p>
+        <div class="scroll-box static">
+            <div class="item ab exam-1">absolute A<br>(zindex: 1)</div>
+            <div class="item ab exam-2">absolute B<br>(zindex: 10)</div>
+        </div>
+
+        <p>2. relative 박스</p>
+        <div class="scroll-box relative">
+            <div class="item ab exam-1">absolute A<br>(zindex: 1)</div>
+            <div class="item ab exam-2">absolute B<br>(zindex: 10)</div>
+        </div>
+        
+        <p>3. sticky 예시</p>
+        <div class="scroll-box relative">
+            <div class="sticky item-head">sticky (top: 0 / zindex: 100)</div>
+            
+            
+            <div class="item ab exam-1">absolute A<br>(zindex: 1)</div>
+            <div class="item ab exam-2">absolute B<br>(zindex: 10)</div>
+            <div class="item text">1</div>
+            <div class="item text">2</div>
+            <div class="item text">3</div>
+            <div class="item text">4</div>
+            <div class="item sticky st-exam-1">sticky (bottom: 0)</div>
+            <div class="item text">5</div>
+            <div class="item text">6</div>
+        </div>
+    </div>
+
+    <div class="fixed exam-side">fixed</div>
+</body>
+</html>

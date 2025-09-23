@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS3 Property Basic</title>
+</head>
+<body>
+<style>
+    * {margin: 0; padding: 0; border: none; box-sizing: border-box;}
+    body{padding: 20px;}
+    hr{margin: 16px 0; height: 1px; background-color: red;}
+    .item {padding: 8px; border-radius: 4px; border: 1px dashed blue;}
+    .item .item {border-color: green;}
+
+    .inline {display: inline;}
+    .inline-block {display: inline-block; width: 120px; height: 40px;}
+    .block {display: block; width: 120px; height: 40px;}
+
+    .flex {display: flex; gap: 8px; flex-wrap: wrap;}
+    .flex .full {width: 100%;}
+    .flex .l-auto {margin-left: auto;} 
+
+    .grid {display: grid; grid-template-columns: 1fr 1fr; gap: 8px;  grid-auto-flow: row;}
+    .grid .row-merge {grid-column: 1/-1;}
+    .grid .col-merge {grid-column: 1; grid-row: span 2;}
+    .grid .side {grid-column: 2;} 
+
+    .contents {display: contents;}
+</style>
+
+    <!-- inline: 줄 안에서 콘텐츠 크기만큼만 차지 (width/height 적용 불가) -->
+    <p>
+        <span class="item inline">inline</span>
+        <span class="item inline">inline</span>
+        <span class="item inline">inline</span>
+    </p>
+    <hr>
+
+    <!-- inline-block: 줄 안 배치 + width/height 적용 가능 -->
+    <p>
+        <span class="item inline-block">inline-block</span>
+        <span class="item inline-block">inline-block</span>
+        <span class="item inline-block">inline-block</span>
+    </p>
+    <hr>
+
+    <!-- block: 한 줄 전체 차지 → 줄바꿈 발생 -->
+    <p>
+        <span class="item block">block</span>
+        <span class="item block">block</span>
+    </p>
+    <hr>
+
+    <!-- flex: 1차원 레이아웃 컨테이너 (가로/세로 방향 정렬) -->
+    <div class="item flex">
+        <div class="item">flex-1</div>
+        <div class="item">flex-2</div>
+        <div class="item full">flex-3</div>
+        <div class="item l-auto">flex-4</div>
+        <div class="item">flex-5</div>
+    </div>
+    <hr>
+
+    <!-- grid: 2차원 레이아웃 컨테이너 (행과 열 기반 배치) -->
+    <div class="item grid">
+        <div class="item">grid-1</div>
+        <div class="item">grid-2</div>
+        <div class="item row-merge">grid-3</div>
+        <div class="item col-merge">grid-4</div>
+        <div class="item">grid-5</div>
+        <div class="item">grid-6</div>
+        <div class="item side">grid-7</div>
+        <div class="item">grid-8</div>
+    </div>
+    <hr>
+
+    <!-- contents: 부모 박스를 없애고, 자식만 직접 부모에 배치된 것처럼 처리 -->
+    <div class="item contents">
+        <div class="item">contents-1</div>
+        <div class="item">contents-2</div>
+    </div>
+    <hr>
+</body>
+</html>

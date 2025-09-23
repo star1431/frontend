@@ -3,54 +3,75 @@
     margin: 0;
     padding: 0;
 }
-
 html {
-    scroll-behavior: smooth;
+    font-size: 62.5%;
 }
 
 html, body {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
 }
-
 body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    color: #222;
+    font-size: 1.6rem; 
+    line-height: 1.5;
+    font-family: Pretendard, -apple-system, sans-serif;
+    color: #121315;
+}
+ul li, ol li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
 }
 
 .ui-body {
-    position: relative;
     display: flex;
     flex-direction: column;
     min-height: 100dvh;
+    background: #f4f4f4;
 }
 
 .ui-header {
-    position: relative;
-    display: block;
+    position: sticky;
+    top: 0;
     margin: 0;
-    padding: 20px 0 10px 0;
+    padding: 20px 0;
     width: 100%;
     background: #005386;
     color: #fff;
     text-align: center;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
+.ui-back-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #005386;
+    background-color: #fff;
+    transform: translateY(-50%) rotate(180deg);
+}
+.ui-title {
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+}
 .ui-main {
-    position: relative;
-    display: block;
     margin: 0;
     padding: 24px;
     width: 100%;
     flex: 1;
 }
 .ui-center-box {
-    position: relative;
-    display: block;
     margin: 32px auto;
     padding: 16px;
     max-width: 1024px;
@@ -58,7 +79,6 @@ body {
     box-shadow: 0 2px 16px rgba(0,0,0,0.07);
 }
 .ui-nav .ui-list {
-    position: relative;
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -66,14 +86,10 @@ body {
     gap: 12px;
 }
 .ui-list li {
-    position: relative;
-    display: block;
     margin: 0;
     padding: 0;
-    list-style: none;
 }
 .ui-link {
-    position: relative;
     display: block;
     margin: 0;
     padding: 12px 18px;
@@ -81,7 +97,6 @@ body {
     height: auto;
     background: #e3f2fd;
     color: #1b76d1;
-    text-decoration: none;
     border-radius: 8px;
     font-weight: 500;
     transition: background 0.2s, color 0.2s;
@@ -91,8 +106,6 @@ body {
     color: #0d47a1;
 }
 .ui-footer {
-    position: relative;
-    display: block;
     margin-top: auto;
     margin: 32px 0 0 0;
     padding: 16px 0;
@@ -102,21 +115,4 @@ body {
     text-align: center;
     font-size: 0.95em;
     border-top: 1px solid #ddd;
-}
-.ui-title {
-    position: relative;
-    display: block;
-    margin: 0 0 24px 0;
-    padding: 0;
-    width: 100%;
-    font-size: 20px;
-}
-@media (max-width: 700px) {
-    .ui-main {
-        max-width: 98vw;
-        padding: 16px 4vw;
-    }
-    .ui-title {
-        font-size: 1.3em;
-    }
 }
