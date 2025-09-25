@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-12</title>
+    
+    <!-- Highlight.js CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <script data-target="exam" src="./js/12.js"></script>
+    <link rel="stylesheet" href="./css/examCode.css">
+    <script src="./js/examCode.js"></script>
+</head>
+<body>
+    <h1 class="page-title">JS Exam 12</h1>
+
+
+    <div class="exam-flex-col" id="examDiv">
+
+        <form class="form" novalidate> <!-- novalidate = 브라우저 기본 유효성 검사 무시 -->
+            <div class="form-head">
+                <p class="form-title">회원정보 입력</p>
+            </div>
+            <div class="field">
+                <div class="field-item">
+                    <label for="input-id">아이디</label>
+                    <input type="text" id="input-id" name="id" required>
+                </div>
+                <div class="field-item">
+                    <label for="input-pw">비밀번호</label>
+                    <input type="password" id="input-pw" name="pw" required>
+                </div>
+                <div class="field-item">
+                    <label for="input-pw-confirm">비밀번호 확인</label>
+                    <input type="password" id="input-pw-confirm" name="pw-confirm" required>
+                </div>
+                <div class="field-item">
+                    <label>성별</label>
+                    <div class="item-group">
+                        <div class="option-item">
+                            <input type="radio" name="gender" id="radio-1" value="m">
+                            <label for="radio-1">남성</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="radio" name="gender" id="radio-2" value="f">
+                            <label for="radio-2">여성</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-foot">
+                <button class="btn-action" type="submit">등록</button>
+            </div>
+        </form>
+    </div>
+    <div class="exam-code">
+        <pre data-target="pre"><code class="language-javascript"></code></pre>
+    </div>
+</body>
+
+</html>
